@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Book to Go
+
+</h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือ</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ตะกร้าหนังสือ</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือที่สั่งซื้อ</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">สถานะการจัดส่งสินค้า</a>
+
+  </div>
+</nav>
+
+
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Book to Go</span>
+</header>
+
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h2 class="w3-jumbo"><b>รายละเอียดหนังสือ</b></h2>
+
+  </div>
+  
+  
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="1.png" style="width:70%" onclick="onClick(this)" alt="รวมโจทย์คณิตเก่งคิดแก้ปัญหา">
+</div>
+<div>
+    <p>
+        <b><h3>"คณิตศาสตร์" ยิ่งชอบ ยิ่งเก่ง ยิ่งเรียน ยิ่งสนุก</h3></b>
+        <br>
+        เนื้อหาโดยสังเขป:  หนังสือเล่มนี้จะช่วยแก้ปมในใจของคนส่วนใหญ่ที่รู้สึก "เกลียดกลัว" ตัวเลข 
+        โดยพาเราย้อนกลับไปค้นหาอะไรบางอย่าง ที่เป็นจุดเริ่มให้หันมา "ชอบ" และ
+        "เข้าใจ" คณิตศาสตร์ ที่เชื่อมโยงผ่านเรื่องราวใกล้ตัวในชีวิตประจำวัน แค่เริ่มต้นจาก 
+        ความชอบ เข้าใจ หมั่นฝึกทำแบบฝึกหัด เราก็จะเรียนคณิตศาสตร์ได้อย่างมีความสุขและสนุกสนาน 
+        แทนที่จะเรียนเพื่อสอบเข้า หรือเพื่อทำข้อสอบให้ได้คะแนนดีเพียงอย่างเดียว 
+        <br>
+        ประเภทหนังสือ:  การศึกษา 
+        <br>
+        ราคา:  165 บาท
+        <br>
+    <button onClick = "window.open('.html')"><b>เพิ่มสินค้าใส่ตระกร้า</b></button>
+    </p>
+</div>
+
+  
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  
+  
+    
+    
+ 
+
+  
+
+
+</div>
+
+
+
+<script>
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
