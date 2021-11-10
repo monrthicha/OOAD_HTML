@@ -10,10 +10,24 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;}
+.button2 {background-color: #e02323;}
 </style>
 <body>
 
-
+<!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
@@ -21,14 +35,13 @@ body {font-size:16px;}
 
 </h3>
   </div>
-</div>
-<div class="w3-bar-block">
-  <a href="main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือ</a>
-  <a href="ShoppingCard.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ตะกร้าหนังสือ</a>
-  <a href="Order.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือที่สั่งซื้อ</a>
-  <a href="Delivery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">สถานะการจัดส่งสินค้า</a>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือ</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ตะกร้าหนังสือ</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือที่สั่งซื้อ</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">สถานะการจัดส่งสินค้า</a>
 
-</div>
+  </div>
 </nav>
 
 
@@ -45,29 +58,27 @@ body {font-size:16px;}
 
   
   <div class="w3-container" style="margin-top:80px" id="showcase">
-      <h2 class="w3-jumbo"><b>รายละเอียดหนังสือ</b></h2>
+      <h2 class="w3-jumbo"><b>ตะกร้าหนังสือ</b></h2>
 
   </div>
-  
-  
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="1.png" style="width:70%" onclick="onClick(this)" alt="รวมโจทย์คณิตเก่งคิดแก้ปัญหา">
+      <img src="1.png" style="width:50%" onclick="onClick(this)" alt="รวมโจทย์คณิตเก่งคิดแก้ปัญหา">
 </div>
 <div>
-    <p>
-        <b><h3>รวมโจทย์คณิตเก่งคิดแก้ปัญหา</h3></b>
+    <button class="button button1" style="float: right;">ชำระค่าหนังสือ</button>
+    <br><br>
+    <h2><p>
+        รวมโจทย์คณิตเก่งคิดแก้ปัญหา
+        <br> 
         <br>
-        เนื้อหาโดยสังเขป:  รวม 63 โจทย์คณิตศาสตร์ที่ใช้สอบเข้าโรงเรียนมัธยมต้นชื่อดังจากญี่ปุ่นหลากหลายรูปแบบ ไม่ว่าจะเป็น 
-        เรขาคณิต จำนวน พื้นที่ ผลต่าง ความน่าจะเป็น การจัดหมู่ พร้อมอัดแน่นด้วยแนวคิดเรื่องการแก้โจทย์ด้วยวิธีพลิกแพลงแบบต่างๆ 
-        ช่วยสร้างความเข้าใจ ฝึกมองภาพความสัมพันธ์ ฝึกความคิดเชิงตรรกะและทักษะการวางแผน เหมาะสำหรับนักเรียนชั้นประถม-มัธยมศึกษา 
+        จำนวน: <input type="number" id="b" value="1"> เล่ม
         <br>
-        ประเภทหนังสือ:  การศึกษา 
         <br>
-        ราคา:  199 บาท
-        <br>
-    <button onClick = "window.open('ShoppingCard.html')"><b>เพิ่มสินค้าใส่ตระกร้า</b></button>
-    </p>
+        ราคารวม: 199 บาท
+
+    </p></h2>
+    <button class="button button2" style="float: right;">ลบหนังสือ</button>
 </div>
 
   
@@ -78,19 +89,7 @@ body {font-size:16px;}
       <p id="caption"></p>
     </div>
   </div>
-
-  
-  
-    
-    
- 
-
-  
-
-
 </div>
-
-
 
 <script>
 
